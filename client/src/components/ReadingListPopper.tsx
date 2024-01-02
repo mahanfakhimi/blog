@@ -1,11 +1,4 @@
-import {
-  type MouseEvent,
-  type FC,
-  useState,
-  useMemo,
-  memo,
-  useCallback,
-} from "react";
+import { type MouseEvent, type FC, useState, useMemo, memo, useCallback } from "react";
 import { styled } from "../../styled-system/jsx";
 import Popper from "./ui/Popper";
 import CheckBox from "./ui/CheckBox";
@@ -65,9 +58,7 @@ const ReadingListPopper = () => {
   const handleChange = useCallback((index: number, isChecked: boolean) => {
     setReadingLists((currReadingLists) =>
       currReadingLists.map((currList, currIndex) =>
-        currIndex === index
-          ? { ...currList, isBookmarked: isChecked }
-          : currList,
+        currIndex === index ? { ...currList, isBookmarked: isChecked } : currList,
       ),
     );
   }, []);
@@ -98,12 +89,7 @@ const ReadingListPopper = () => {
       >
         <styled.div minW="300px" padding="16px">
           {readingLists.map((list, index) => (
-            <ReadingListItem
-              key={index}
-              list={list}
-              onChange={handleChange}
-              index={index}
-            />
+            <ReadingListItem key={index} list={list} onChange={handleChange} index={index} />
           ))}
 
           <styled.div pt="16px" borderTop="1px solid #f2f2f2">
@@ -115,21 +101,12 @@ const ReadingListPopper = () => {
       </Popper>
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <styled.div
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
-          mb="48px"
-        >
+        <styled.div display="flex" alignItems="center" justifyContent="space-between" mb="48px">
           <styled.h2 fontSize="20px" fontWeight="700">
             Create new list
           </styled.h2>
 
-          <styled.div
-            color="#6b6b6b"
-            _hover={{ color: "#000" }}
-            cursor="pointer"
-          >
+          <styled.div color="#6b6b6b" _hover={{ color: "#000" }} cursor="pointer">
             <CloseIcon />
           </styled.div>
         </styled.div>
@@ -178,21 +155,14 @@ type ReadingListItemProps = {
   onChange: (index: number, isChecked: boolean) => void;
 };
 
-const ReadingListItem: FC<ReadingListItemProps> = memo(
-  ({ index, list, onChange }) => (
-    <styled.div
-      display="flex"
-      alignItems="center"
-      justifyContent="space-between"
-      mb="16px"
-    >
-      <CheckBox
-        isChecked={list.isBookmarked}
-        onChange={(isChecked) => onChange(index, isChecked)}
-        label={list.title}
-      />
+const ReadingListItem: FC<ReadingListItemProps> = memo(({ index, list, onChange }) => (
+  <styled.div display="flex" alignItems="center" justifyContent="space-between" mb="16px">
+    <CheckBox
+      isChecked={list.isBookmarked}
+      onChange={(isChecked) => onChange(index, isChecked)}
+      label={list.title}
+    />
 
-      {list.visibility === "PRIVATE" && <LockIcon />}
-    </styled.div>
-  ),
-);
+    {list.visibility === "PRIVATE" && <LockIcon />}
+  </styled.div>
+));

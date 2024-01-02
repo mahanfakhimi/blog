@@ -10,8 +10,7 @@ import StoriesIcon from "../icons/StoriesIcon";
 const MoreOptions = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLImageElement | null>(null);
 
-  const handleOpenPopper = (e: MouseEvent<HTMLImageElement>) =>
-    setAnchorEl(e.currentTarget);
+  const handleOpenPopper = (e: MouseEvent<HTMLImageElement>) => setAnchorEl(e.currentTarget);
 
   const handleClosePopper = () => setAnchorEl(null);
 
@@ -101,9 +100,7 @@ const MoreOptions = () => {
                 color="#6b6b6b"
                 _hover={{ color: "#000" }}
               >
-                <styled.span fontSize="14px">
-                  Refine recommendations
-                </styled.span>
+                <styled.span fontSize="14px">Refine recommendations</styled.span>
               </styled.div>
             </Link>
           </styled.div>

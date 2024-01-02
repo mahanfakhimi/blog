@@ -11,27 +11,10 @@ type MenuProps = {
   onClose: () => void;
 };
 
-const Menu: FC<MenuProps> = ({
-  isOpen,
-  anchorEl,
-  onClose,
-  placement,
-  children,
-}) => {
+const Menu: FC<MenuProps> = ({ isOpen, anchorEl, onClose, placement, children }) => {
   return (
-    <Popper
-      anchorEl={anchorEl}
-      isOpen={isOpen}
-      placement={placement}
-      onClose={onClose}
-    >
-      <styled.div
-        listStyleType="none"
-        overflow="hidden"
-        bgColor="#fff"
-        rounded="3px"
-        py="8px"
-      >
+    <Popper anchorEl={anchorEl} isOpen={isOpen} placement={placement} onClose={onClose}>
+      <styled.div listStyleType="none" overflow="hidden" bgColor="#fff" rounded="3px" py="8px">
         {children}
       </styled.div>
     </Popper>

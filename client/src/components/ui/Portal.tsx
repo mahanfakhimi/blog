@@ -11,8 +11,7 @@ const Portal: FC<PortalProps> = ({ containerId = "#portals", children }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const containerElement =
-      document.querySelector<HTMLDivElement>(containerId);
+    const containerElement = document.querySelector<HTMLDivElement>(containerId);
 
     if (!containerElement) return;
 

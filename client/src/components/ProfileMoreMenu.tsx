@@ -7,8 +7,7 @@ import MenuItem from "./ui/MenuItem";
 const ProfileMoreMenu = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
-  const haneleMenuOpen = (e: MouseEvent<HTMLButtonElement>) =>
-    setAnchorEl(e.currentTarget);
+  const haneleMenuOpen = (e: MouseEvent<HTMLButtonElement>) => setAnchorEl(e.currentTarget);
 
   const handleMenuClose = () => setAnchorEl(null);
 

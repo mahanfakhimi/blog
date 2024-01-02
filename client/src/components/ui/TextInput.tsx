@@ -21,8 +21,7 @@ const TextInput: FC<InputTextProps> = ({
   onChange,
   containerCss,
 }) => {
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
-    onChange(e.target.value);
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value);
 
   return (
     <styled.div fontSize="14px" css={containerCss}>
@@ -43,9 +42,7 @@ const TextInput: FC<InputTextProps> = ({
       <styled.div
         display="flex"
         alignItems="center"
-        justifyContent={
-          !(errorMessage || description) ? "flex-end" : "space-between"
-        }
+        justifyContent={!(errorMessage || description) ? "flex-end" : "space-between"}
         mt="4px"
         fontSize="14px"
       >

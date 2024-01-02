@@ -36,11 +36,7 @@ const RecentSearches = () => {
             </styled.div>
           </Link>
 
-          <styled.div
-            color="#6b6b6b"
-            _hover={{ color: "#000" }}
-            cursor="pointer"
-          >
+          <styled.div color="#6b6b6b" _hover={{ color: "#000" }} cursor="pointer">
             <CloseIcon />
           </styled.div>
         </styled.div>

@@ -1,16 +1,5 @@
-import {
-  type CSSProperties,
-  type FC,
-  type ReactNode,
-  useEffect,
-  useRef,
-} from "react";
-import {
-  type Placement,
-  type VirtualElement,
-  type Instance,
-  createPopper,
-} from "@popperjs/core";
+import { type CSSProperties, type FC, type ReactNode, useEffect, useRef } from "react";
+import { type Placement, type VirtualElement, type Instance, createPopper } from "@popperjs/core";
 import { type TransitionStatus, Transition } from "react-transition-group";
 import { styled } from "../../../styled-system/jsx";
 import Portal from "./Portal.tsx";
@@ -35,13 +24,7 @@ type PopperProps = {
   isOpen: boolean;
 };
 
-const Popper: FC<PopperProps> = ({
-  children,
-  isOpen,
-  onClose,
-  anchorEl,
-  placement = "bottom",
-}) => {
+const Popper: FC<PopperProps> = ({ children, isOpen, onClose, anchorEl, placement = "bottom" }) => {
   const popperRef = useRef<HTMLDivElement>(null);
   const popperInstanceRef = useRef<Instance | null>(null);
 

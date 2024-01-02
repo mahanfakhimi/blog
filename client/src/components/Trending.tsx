@@ -11,12 +11,7 @@ const Trending = () => {
       </styled.div>
 
       <styled.div>
-        <styled.div
-          display="flex"
-          alignItems="center"
-          columnGap="10px"
-          mb="8px"
-        >
+        <styled.div display="flex" alignItems="center" columnGap="10px" mb="8px">
           <a href="#">
             <Avatar
               size="SM"
@@ -30,10 +25,9 @@ const Trending = () => {
         </styled.div>
 
         <styled.h2 fontWeight="700" fontSize="16px" mb="8px" lineClamp="2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
-          nam quae possimus officiis autem magnam, est laboriosam in, doloribus
-          expedita optio ut. Nulla quasi assumenda repellat. Error laudantium
-          aliquam atque!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, nam quae possimus
+          officiis autem magnam, est laboriosam in, doloribus expedita optio ut. Nulla quasi
+          assumenda repellat. Error laudantium aliquam atque!
         </styled.h2>
 
         <styled.span color="#6b6b6b" fontSize="14px">

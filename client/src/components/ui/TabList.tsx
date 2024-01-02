@@ -36,12 +36,10 @@ const TabList: FC<TabListProps> = ({ tabs, onTabClick, activeTabIndex }) => {
       tabListRef.current?.addEventListener("scroll", handleScroll);
     });
 
-    return () =>
-      tabListRef.current?.removeEventListener("scroll", handleScroll);
+    return () => tabListRef.current?.removeEventListener("scroll", handleScroll);
   }, [tabs]);
 
-  const handleArrowClick = (amount: number) =>
-    tabListRef.current?.scrollBy({ left: amount });
+  const handleArrowClick = (amount: number) => tabListRef.current?.scrollBy({ left: amount });
 
   const renderArrow = (direction: "right" | "left") => {
     return (

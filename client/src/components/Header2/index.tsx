@@ -51,22 +51,14 @@ const Header2 = () => {
 
         <styled.div display={{ sm: "none" }}>
           <Link to="/search">
-            <styled.div
-              cursor="pointer"
-              color="#6b6b6b"
-              _hover={{ color: "#000" }}
-            >
+            <styled.div cursor="pointer" color="#6b6b6b" _hover={{ color: "#000" }}>
               <SearchIcon />
             </styled.div>
           </Link>
         </styled.div>
 
         <Link to="/notifications">
-          <styled.div
-            cursor="pointer"
-            color="#6b6b6b"
-            _hover={{ color: "#000" }}
-          >
+          <styled.div cursor="pointer" color="#6b6b6b" _hover={{ color: "#000" }}>
             <NotificationIcon />
           </styled.div>
         </Link>

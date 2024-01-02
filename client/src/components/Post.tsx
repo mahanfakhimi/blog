@@ -9,12 +9,7 @@ const Post = () => {
   return (
     <styled.div display="flex" alignItems="center" columnGap="32px">
       <div>
-        <styled.div
-          display="flex"
-          alignItems="center"
-          columnGap="10px"
-          mb="8px"
-        >
+        <styled.div display="flex" alignItems="center" columnGap="10px" mb="8px">
           <a href="#">
             <Avatar
               size="SM"
@@ -24,9 +19,7 @@ const Post = () => {
 
           <styled.div display="flex" alignItems="center" fontSize="14px">
             <styled.h4>The Bold Italic</styled.h4>
-            <styled.span color="#6b6b6b">
-              &nbsp;&nbsp;·&nbsp;&nbsp;Aug 18
-            </styled.span>
+            <styled.span color="#6b6b6b">&nbsp;&nbsp;·&nbsp;&nbsp;Aug 18</styled.span>
           </styled.div>
         </styled.div>
 
@@ -37,9 +30,9 @@ const Post = () => {
           mb="8px"
           lineClamp="2"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          rerum id illo quam. Sapiente quis quidem commodi, vitae ipsa
-          necessitatibus ducimus eum minima nisi perferendis.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium rerum id illo quam.
+          Sapiente quis quidem commodi, vitae ipsa necessitatibus ducimus eum minima nisi
+          perferendis.
         </styled.h2>
 
         <styled.h3
@@ -49,25 +42,17 @@ const Post = () => {
           display={{ mdDown: "none" }}
           lineClamp="2"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quam
-          corrupti libero ullam suscipit vitae nemo ad vero eos doloribus!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quam corrupti libero
+          ullam suscipit vitae nemo ad vero eos doloribus!
         </styled.h3>
 
-        <styled.div
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
-        >
+        <styled.div display="flex" alignItems="center" justifyContent="space-between">
           <styled.div display="flex" alignItems="center">
             <styled.span color="#6b6b6b" fontSize="14px">
               Dec 1 &nbsp;·&nbsp; 6 min read &nbsp;·&nbsp;&nbsp;
             </styled.span>
 
-            <Button
-              buttonStyle="BRAND_GRAY"
-              size="SM"
-              display={{ smDown: "none" }}
-            >
+            <Button buttonStyle="BRAND_GRAY" size="SM" display={{ smDown: "none" }}>
               Innovation
             </Button>
           </styled.div>

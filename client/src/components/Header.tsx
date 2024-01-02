@@ -31,27 +31,15 @@ const Header = () => {
 
         <styled.div display="flex" alignItems="center" columnGap="24px">
           <styled.ul display="flex" alignItems="center" columnGap="24px">
-            <styled.li
-              color="#242424"
-              mdDown={{ display: "none" }}
-              fontSize="14px"
-            >
+            <styled.li color="#242424" mdDown={{ display: "none" }} fontSize="14px">
               <a href="#">Our story</a>
             </styled.li>
 
-            <styled.li
-              color="#242424"
-              mdDown={{ display: "none" }}
-              fontSize="14px"
-            >
+            <styled.li color="#242424" mdDown={{ display: "none" }} fontSize="14px">
               <a href="#">Membership</a>
             </styled.li>
 
-            <styled.li
-              color="#242424"
-              mdDown={{ display: "none" }}
-              fontSize="14px"
-            >
+            <styled.li color="#242424" mdDown={{ display: "none" }} fontSize="14px">
               <a href="#">Write</a>
             </styled.li>
 
@@ -60,9 +48,7 @@ const Header = () => {
             </styled.li>
           </styled.ul>
 
-          <Button buttonStyle={isScrolled ? "STRONG" : "BRAND"}>
-            Get started
-          </Button>
+          <Button buttonStyle={isScrolled ? "STRONG" : "BRAND"}>Get started</Button>
         </styled.div>
       </styled.div>
     </styled.header>

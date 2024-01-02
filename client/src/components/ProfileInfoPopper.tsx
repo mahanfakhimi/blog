@@ -8,8 +8,7 @@ import Button from "./ui/Button";
 const ProfileInfoPopper = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
-  const handleOpenPopper = (e: MouseEvent<HTMLButtonElement>) =>
-    setAnchorEl(e.currentTarget);
+  const handleOpenPopper = (e: MouseEvent<HTMLButtonElement>) => setAnchorEl(e.currentTarget);
 
   const handleClosePopper = () => setAnchorEl(null);
 
@@ -45,10 +44,9 @@ const ProfileInfoPopper = () => {
           </styled.div>
 
           <styled.p fontSize="14px" color="#6A6B6B" lineClamp="3" mt="16px">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Reprehenderit, nihil quod! Excepturi consequuntur ipsa voluptatem,
-            corporis quaerat quod, voluptatum non, distinctio ea est similique
-            tenetur!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, nihil quod!
+            Excepturi consequuntur ipsa voluptatem, corporis quaerat quod, voluptatum non,
+            distinctio ea est similique tenetur!
           </styled.p>
 
           <styled.div

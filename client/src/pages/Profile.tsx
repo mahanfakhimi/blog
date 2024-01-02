@@ -19,8 +19,7 @@ const TABS: TabsProperties = [
 const Profile = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
-  const handleTabClick = (newTabIndex: number) =>
-    setActiveTabIndex(newTabIndex);
+  const handleTabClick = (newTabIndex: number) => setActiveTabIndex(newTabIndex);
 
   return (
     <div>
@@ -60,19 +59,12 @@ const Profile = () => {
                 />
 
                 <div>
-                  <styled.h1
-                    fontSize={{ base: "24px", md: "42px" }}
-                    fontWeight="500"
-                  >
+                  <styled.h1 fontSize={{ base: "24px", md: "42px" }} fontWeight="500">
                     Mahan_fki
                   </styled.h1>
 
                   <a href="#" className={css({ display: { lg: "none" } })}>
-                    <styled.h2
-                      color="#6B6B6B"
-                      fontSize="16px"
-                      _hover={{ color: "#000" }}
-                    >
+                    <styled.h2 color="#6B6B6B" fontSize="16px" _hover={{ color: "#000" }}>
                       1.7K Followers
                     </styled.h2>
                   </a>
@@ -82,11 +74,7 @@ const Profile = () => {
               <ProfileMoreMenu />
             </styled.div>
 
-            <styled.div
-              display={{ base: "flex", lg: "none" }}
-              alignItems="center"
-              columnGap="16px"
-            >
+            <styled.div display={{ base: "flex", lg: "none" }} alignItems="center" columnGap="16px">
               <Button buttonStyle="STRONG" w="100%">
                 Follow
               </Button>
@@ -97,18 +85,9 @@ const Profile = () => {
             </styled.div>
           </styled.div>
 
-          <TabList
-            activeTabIndex={activeTabIndex}
-            onTabClick={handleTabClick}
-            tabs={TABS}
-          />
+          <TabList activeTabIndex={activeTabIndex} onTabClick={handleTabClick} tabs={TABS} />
 
-          <styled.div
-            my="48px"
-            display="flex"
-            flexDirection="column"
-            rowGap="48px"
-          >
+          <styled.div my="48px" display="flex" flexDirection="column" rowGap="48px">
             <PostList />
           </styled.div>
         </styled.div>

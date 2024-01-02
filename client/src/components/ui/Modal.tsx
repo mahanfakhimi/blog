@@ -26,12 +26,7 @@ const Modal: FC<ModalProps> = ({ isOpen, children, onClose }) => {
 
   return (
     <Portal>
-      <Transition
-        nodeRef={nodeRef}
-        in={isOpen}
-        unmountOnExit
-        timeout={duration}
-      >
+      <Transition nodeRef={nodeRef} in={isOpen} unmountOnExit timeout={duration}>
         {(state) => (
           <styled.div
             pos="absolute"

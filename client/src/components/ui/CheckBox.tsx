@@ -10,12 +10,7 @@ type CheckBoxProps = {
   onChange: (isChecked: boolean) => void;
 };
 
-const CheckBox: FC<CheckBoxProps> = ({
-  isChecked,
-  isLoading,
-  label,
-  onChange,
-}) => {
+const CheckBox: FC<CheckBoxProps> = ({ isChecked, isLoading, label, onChange }) => {
   const handleClick = () => onChange(!isChecked);
 
   return (
@@ -43,12 +38,7 @@ const CheckBox: FC<CheckBoxProps> = ({
         {isChecked && <CheckIcon className={css({ flex: 1 })} />}
       </styled.div>
 
-      <styled.span
-        onClick={handleClick}
-        cursor="pointer"
-        fontSize="16px"
-        color="#000"
-      >
+      <styled.span onClick={handleClick} cursor="pointer" fontSize="16px" color="#000">
         {label}
       </styled.span>
     </styled.div>

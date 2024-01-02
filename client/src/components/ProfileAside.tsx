@@ -26,20 +26,14 @@ const ProfileAside = () => {
       </styled.h2>
 
       <a href="#">
-        <styled.h2
-          color="#6B6B6B"
-          fontSize="16px"
-          mb="16px"
-          _hover={{ color: "#000" }}
-        >
+        <styled.h2 color="#6B6B6B" fontSize="16px" mb="16px" _hover={{ color: "#000" }}>
           1.7K Followers
         </styled.h2>
       </a>
 
       <styled.p color="#6B6B6B" fontSize="16px" mb="24px">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus libero
-        consequatur blanditiis quibusdam repudiandae deleniti ipsam! Nobis
-        repudiandae exercitationem aut.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus libero consequatur
+        blanditiis quibusdam repudiandae deleniti ipsam! Nobis repudiandae exercitationem aut.
       </styled.p>
 
       <styled.div display="flex" alignItems="center" columnGap="16px">

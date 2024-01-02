@@ -48,9 +48,7 @@ const SearchBar = () => {
         px="14px"
         pos="relative"
       >
-        <SearchIcon
-          className={css({ color: focusedColor, pointerEvents: "none" })}
-        />
+        <SearchIcon className={css({ color: focusedColor, pointerEvents: "none" })} />
 
         <styled.input
           type="text"
@@ -74,12 +72,7 @@ const SearchBar = () => {
         onClose={() => setAnchorEl(null)}
         placement="bottom-start"
       >
-        <styled.div
-          bgColor="#fff"
-          rounded="3px"
-          minW="350px"
-          p="16px 16px 0 16px"
-        >
+        <styled.div bgColor="#fff" rounded="3px" minW="350px" p="16px 16px 0 16px">
           <styled.div borderBottom="1px solid #f2f2f2" pb="16px">
             <styled.span color="#6b6b6b" fontSize="14px" fontWeight="500">
               Recent searches

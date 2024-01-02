@@ -31,8 +31,7 @@ const TABS: TabsProperties = [
 const Home = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
-  const handleTabClick = (newTabIndex: number) =>
-    setActiveTabIndex(newTabIndex);
+  const handleTabClick = (newTabIndex: number) => setActiveTabIndex(newTabIndex);
 
   return (
     <div>
@@ -47,11 +46,7 @@ const Home = () => {
         columnGap="48px"
       >
         <styled.div gridColumn={{ base: "8", lg: "5" }} mt="48px">
-          <TabList
-            activeTabIndex={activeTabIndex}
-            onTabClick={handleTabClick}
-            tabs={TABS}
-          />
+          <TabList activeTabIndex={activeTabIndex} onTabClick={handleTabClick} tabs={TABS} />
 
           <styled.div my="48px">
             <PostList />
