@@ -14,7 +14,8 @@ const TABS: TabsProperties = [
 const Notifications = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
-  const handleTabClick = (newTabIndex: number) => setActiveTabIndex(newTabIndex);
+  const handleTabClick = (newTabIndex: number) =>
+    setActiveTabIndex(newTabIndex);
 
   return (
     <div>
@@ -30,15 +31,33 @@ const Notifications = () => {
         columnGap="48px"
       >
         <styled.div gridColumn={{ base: "8", lg: "5" }} mt="48px">
-          <styled.h1 fontSize={{ base: "24px", md: "42px" }} fontWeight="500" mb="48px">
+          <styled.h1
+            fontSize={{ base: "24px", md: "42px" }}
+            fontWeight="500"
+            mb="48px"
+          >
             Notifications
           </styled.h1>
 
-          <TabList activeTabIndex={activeTabIndex} onTabClick={handleTabClick} tabs={TABS} />
+          <TabList
+            activeTabIndex={activeTabIndex}
+            onTabClick={handleTabClick}
+            tabs={TABS}
+          />
 
-          <styled.div my="48px" display="flex" flexDirection="column" rowGap="48px">
+          <styled.div
+            my="48px"
+            display="flex"
+            flexDirection="column"
+            rowGap="48px"
+          >
             {[...Array(25)].map((_, index) => (
-              <styled.div key={index} display="flex" alignItems="center" columnGap="10px">
+              <styled.div
+                key={index}
+                display="flex"
+                alignItems="center"
+                columnGap="10px"
+              >
                 <a href="#" className={css({ flex: "none" })}>
                   <Avatar
                     size="MD"

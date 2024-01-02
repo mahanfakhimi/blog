@@ -47,7 +47,7 @@ const ReadingListPopper = () => {
 
   const isListBookmarked = useMemo(
     () => readingLists.some((list) => list.isBookmarked),
-    [readingLists]
+    [readingLists],
   );
 
   const handleOpenPopper = (e: MouseEvent<HTMLButtonElement>) => {
@@ -55,8 +55,8 @@ const ReadingListPopper = () => {
 
     setReadingLists((currReadingLists) =>
       currReadingLists.map((list) =>
-        list.isDefaultReadingList ? { ...list, isBookmarked: true } : list
-      )
+        list.isDefaultReadingList ? { ...list, isBookmarked: true } : list,
+      ),
     );
   };
 
@@ -67,8 +67,8 @@ const ReadingListPopper = () => {
       currReadingLists.map((currList, currIndex) =>
         currIndex === index
           ? { ...currList, isBookmarked: isChecked }
-          : currList
-      )
+          : currList,
+      ),
     );
   }, []);
 
@@ -194,5 +194,5 @@ const ReadingListItem: FC<ReadingListItemProps> = memo(
 
       {list.visibility === "PRIVATE" && <LockIcon />}
     </styled.div>
-  )
+  ),
 );

@@ -26,7 +26,11 @@ const Following = () => {
             />
 
             <a href="#">
-              <styled.p fontSize="14px" color="#6B6B6B" _hover={{ color: "#000" }}>
+              <styled.p
+                fontSize="14px"
+                color="#6B6B6B"
+                _hover={{ color: "#000" }}
+              >
                 Lorem ipsum dolor sit amet.
               </styled.p>
             </a>

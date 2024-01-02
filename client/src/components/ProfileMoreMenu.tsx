@@ -29,7 +29,7 @@ const ProfileMoreMenu = () => {
         placement="bottom-end"
         onClose={handleMenuClose}
       >
-        <styled.div minW="160px">
+        <styled.div>
           <MenuItem>Copy link to profile</MenuItem>
           <MenuItem>Mute this author</MenuItem>
           <MenuItem>Block this author</MenuItem>

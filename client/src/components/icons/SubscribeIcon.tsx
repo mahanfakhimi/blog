@@ -1,5 +1,12 @@
 const SubscribeIcon = (props: JSX.IntrinsicElements["svg"]) => (
-  <svg width="35" height="35" viewBox="0 0 38 38" stroke="#fff" fill="none" {...props}>
+  <svg
+    width="35"
+    height="35"
+    viewBox="0 0 38 38"
+    stroke="#fff"
+    fill="none"
+    {...props}
+  >
     <rect x="26.25" y="9.25" width="0.5" height="6.5" rx="0.25"></rect>
     <rect
       x="29.75"

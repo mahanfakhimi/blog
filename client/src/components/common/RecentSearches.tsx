@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { styled } from "../../styled-system/jsx";
-import { css } from "../../styled-system/css";
-import SearchIcon from "./icons/SearchIcon";
-import CloseIcon from "./icons/CloseIcon";
+import { styled } from "../../../styled-system/jsx";
+import { css } from "../../../styled-system/css";
+import SearchIcon from "../icons/SearchIcon";
+import CloseIcon from "../icons/CloseIcon";
 
 const RecentSearches = () => {
   return (

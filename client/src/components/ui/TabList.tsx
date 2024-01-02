@@ -36,10 +36,12 @@ const TabList: FC<TabListProps> = ({ tabs, onTabClick, activeTabIndex }) => {
       tabListRef.current?.addEventListener("scroll", handleScroll);
     });
 
-    return () => tabListRef.current?.removeEventListener("scroll", handleScroll);
+    return () =>
+      tabListRef.current?.removeEventListener("scroll", handleScroll);
   }, [tabs]);
 
-  const handleArrowClick = (amount: number) => tabListRef.current?.scrollBy({ left: amount });
+  const handleArrowClick = (amount: number) =>
+    tabListRef.current?.scrollBy({ left: amount });
 
   const renderArrow = (direction: "right" | "left") => {
     return (
@@ -57,7 +59,10 @@ const TabList: FC<TabListProps> = ({ tabs, onTabClick, activeTabIndex }) => {
         rotate={direction === "right" ? "180deg" : undefined}
         _hover={{ color: "#000" }}
       >
-        <styled.button cursor="pointer" onClick={() => handleArrowClick(direction === "right" ? 100 : -100)}>
+        <styled.button
+          cursor="pointer"
+          onClick={() => handleArrowClick(direction === "right" ? 100 : -100)}
+        >
           <ArrowLeftIcon />
         </styled.button>
       </styled.div>
@@ -65,7 +70,13 @@ const TabList: FC<TabListProps> = ({ tabs, onTabClick, activeTabIndex }) => {
   };
 
   return (
-    <styled.div w="100%" display="flex" alignItems="center" boxShadow="#f2f2f2 0px -1px 0px inset" pos="relative">
+    <styled.div
+      w="100%"
+      display="flex"
+      alignItems="center"
+      boxShadow="#f2f2f2 0px -1px 0px inset"
+      pos="relative"
+    >
       {isShowArrowLeft && renderArrow("left")}
 
       <styled.div
