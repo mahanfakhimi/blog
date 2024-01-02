@@ -18,8 +18,6 @@ const CreateNewListModal: FC<CreateNewListModalProps> = memo(({ isOpen, onClose 
     visibility: "PUBLIC" as "PUBLIC" | "PRIVATE",
   });
 
-  console.log("re render");
-
   useEffect(
     () => () => setFormValues({ listName: "", listDescription: "", visibility: "PUBLIC" }),
     [isOpen],
