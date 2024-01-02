@@ -1,5 +1,5 @@
-import { styled } from "../../styled-system/jsx";
-import Avatar from "./ui/Avatar";
+import { styled } from "../../../../styled-system/jsx";
+import Avatar from "../../ui/Avatar";
 
 const Trending = () => {
   return (

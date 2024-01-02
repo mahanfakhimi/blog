@@ -1,4 +1,4 @@
-import { styled } from "../../styled-system/jsx";
+import { styled } from "../../../styled-system/jsx";
 import Post from "./Post";
 
 const PostList = () => {

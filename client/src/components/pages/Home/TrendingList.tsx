@@ -1,6 +1,6 @@
-import { styled } from "../../styled-system/jsx";
+import { styled } from "../../../../styled-system/jsx";
 import Trending from "./Trending";
-import TrendingIcon from "./icons/TrendingIcon";
+import TrendingIcon from "../../icons/TrendingIcon";
 
 const TrendingList = () => {
   return (

@@ -1,14 +1,14 @@
 import { type MouseEvent, type FC, useState, useMemo, memo, useCallback } from "react";
-import { styled } from "../../styled-system/jsx";
-import Popper from "./ui/Popper";
-import CheckBox from "./ui/CheckBox";
-import BookmarkIcon from "./icons/BookmarkIcon";
-import LockIcon from "./icons/LockIcon";
-import BookmarkFilledIcon from "./icons/BookmarkFilledIcon";
-import Button from "./ui/Button";
-import Modal from "./ui/Modal";
-import TextInput from "./ui/TextInput";
-import CloseIcon from "./icons/CloseIcon";
+import { styled } from "../../../../styled-system/jsx";
+import Popper from "../../ui/Popper";
+import CheckBox from "../../ui/CheckBox";
+import BookmarkIcon from "../../icons/BookmarkIcon";
+import LockIcon from "../../icons/LockIcon";
+import BookmarkFilledIcon from "../../icons/BookmarkFilledIcon";
+import Button from "../../ui/Button";
+import Modal from "../../ui/Modal";
+import TextInput from "../../ui/TextInput";
+import CloseIcon from "../../icons/CloseIcon";
 
 type ReadingList = {
   title: string;

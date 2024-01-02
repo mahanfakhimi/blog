@@ -1,11 +1,11 @@
 import { type ChangeEvent, type FocusEvent, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { styled } from "../../../styled-system/jsx";
-import { css } from "../../../styled-system/css";
-import SearchIcon from "../icons/SearchIcon";
-import useInputEnter from "../../hooks/useInputEnter";
-import Popper from "../ui/Popper";
-import RecentSearches from "../common/RecentSearches";
+import { styled } from "../../../../styled-system/jsx";
+import { css } from "../../../../styled-system/css";
+import SearchIcon from "../../icons/SearchIcon";
+import useInputEnter from "../../../hooks/useInputEnter";
+import Popper from "../../ui/Popper";
+import RecentSearches from "../RecentSearches";
 
 const SearchBar = () => {
   const [anchorEl, setAnchorEl] = useState<any | null>(null);

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { styled } from "../../../styled-system/jsx";
-import DiscoverAside from "../common/DiscoverAside";
-import PostList from "../PostList";
-import Header2 from "../Header2";
-import TabList, { TabsProperties } from "../ui/TabList";
+import { styled } from "../../../../styled-system/jsx";
+import DiscoverAside from "../../common/DiscoverAside";
+import PostList from "../../common/PostList";
+import Header2 from "../../common/Header2";
+import TabList, { TabsProperties } from "../../ui/TabList";
 
 const TABS: TabsProperties = [
   { title: "Tab #1", href: "#" },

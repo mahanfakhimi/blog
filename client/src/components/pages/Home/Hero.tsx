@@ -1,5 +1,5 @@
-import { styled } from "../../styled-system/jsx";
-import Button from "./ui/Button";
+import { styled } from "../../../../styled-system/jsx";
+import Button from "../../ui/Button";
 
 const Hero = () => {
   return (

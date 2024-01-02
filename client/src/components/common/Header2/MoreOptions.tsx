@@ -1,11 +1,11 @@
 import { type MouseEvent, useState } from "react";
 import { Link } from "react-router-dom";
-import { styled } from "../../../styled-system/jsx";
-import Avatar from "../ui/Avatar";
-import Popper from "../ui/Popper";
-import ProfileIcon from "../icons/PeofileIcon";
-import LibraryIcon from "../icons/LibraryIcon";
-import StoriesIcon from "../icons/StoriesIcon";
+import { styled } from "../../../../styled-system/jsx";
+import Avatar from "../../ui/Avatar";
+import Popper from "../../ui/Popper";
+import ProfileIcon from "../../icons/PeofileIcon";
+import LibraryIcon from "../../icons/LibraryIcon";
+import StoriesIcon from "../../icons/StoriesIcon";
 
 const MoreOptions = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLImageElement | null>(null);

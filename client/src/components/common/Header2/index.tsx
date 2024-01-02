@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { styled } from "../../../styled-system/jsx";
-import { css } from "../../../styled-system/css";
+import { styled } from "../../../../styled-system/jsx";
+import { css } from "../../../../styled-system/css";
 import SearchBar from "./SearchBar";
-import MediumIcon2 from "../icons/MediumIcon2";
-import SearchIcon from "../icons/SearchIcon";
-import NotificationIcon from "../icons/NotificationIcon";
-import WriteIcon from "../icons/WriteIcon";
+import MediumIcon2 from "../../icons/MediumIcon2";
+import SearchIcon from "../../icons/SearchIcon";
+import NotificationIcon from "../../icons/NotificationIcon";
+import WriteIcon from "../../icons/WriteIcon";
 import MoreOptions from "./MoreOptions";
 
 const Header2 = () => {

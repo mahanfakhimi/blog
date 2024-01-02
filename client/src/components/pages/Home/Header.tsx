@@ -1,8 +1,8 @@
-import { styled } from "../../styled-system/jsx";
-import { css } from "../../styled-system/css";
-import useScrollTop from "../hooks/useScrollTop";
-import MediumIcon from "./icons/MediumIcon";
-import Button from "./ui/Button";
+import { styled } from "../../../../styled-system/jsx";
+import { css } from "../../../../styled-system/css";
+import useScrollTop from "../../../hooks/useScrollTop";
+import MediumIcon from "../../icons/MediumIcon";
+import Button from "../../ui/Button";
 
 const Header = () => {
   const isScrolled = useScrollTop(250);
