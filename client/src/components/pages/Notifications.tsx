@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { styled } from "../../../styled-system/jsx";
+import { css } from "../../../styled-system/css";
 import TabList, { TabsProperties } from "../ui/TabList";
 import Header2 from "../common/Header2";
 import DiscoverAside from "../common/DiscoverAside";
 import Avatar from "../ui/Avatar";
-import { css } from "../../../styled-system/css";
 
 const TABS: TabsProperties = [
   { title: "All", href: "/me/notifications" },
