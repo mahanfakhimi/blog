@@ -18,7 +18,7 @@ const transitionStyles: Partial<Record<TransitionStatus, CSSProperties>> = {
 type ModalProps = {
   isOpen: boolean;
   children: ReactNode;
-  onClose: () => void;
+  onClose: NoneToVoidFunction;
 };
 
 const Modal: FC<ModalProps> = ({ isOpen, children, onClose }) => {

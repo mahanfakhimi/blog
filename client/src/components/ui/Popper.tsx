@@ -20,7 +20,7 @@ type PopperProps = {
   anchorEl: VirtualElement | null;
   children: ReactNode;
   placement?: Placement;
-  onClose: () => void;
+  onClose: NoneToVoidFunction;
   isOpen: boolean;
 };
 

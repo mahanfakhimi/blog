@@ -6,9 +6,7 @@ import BookmarkIcon from "../../icons/BookmarkIcon";
 import LockIcon from "../../icons/LockIcon";
 import BookmarkFilledIcon from "../../icons/BookmarkFilledIcon";
 import Button from "../../ui/Button";
-import Modal from "../../ui/Modal";
-import TextInput from "../../ui/TextInput";
-import CloseIcon from "../../icons/CloseIcon";
+import CreateNewListModal from "./CreateNewListModal";
 
 type ReadingList = {
   title: string;
@@ -100,49 +98,7 @@ const ReadingListPopper = () => {
         </styled.div>
       </Popper>
 
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <styled.div display="flex" alignItems="center" justifyContent="space-between" mb="48px">
-          <styled.h2 fontSize="20px" fontWeight="700">
-            Create new list
-          </styled.h2>
-
-          <styled.div color="#6b6b6b" _hover={{ color: "#000" }} cursor="pointer">
-            <CloseIcon />
-          </styled.div>
-        </styled.div>
-
-        <TextInput
-          placeholder="Give it a name"
-          maxLength={50}
-          value=""
-          onChange={() => {}}
-          containerCss={{ mb: "16px" }}
-        />
-
-        <TextInput
-          placeholder="Description"
-          maxLength={280}
-          value=""
-          onChange={() => {}}
-          containerCss={{ mb: "16px" }}
-        />
-
-        <CheckBox isChecked label="Make it private" onChange={() => {}} />
-
-        <styled.div
-          display="flex"
-          alignItems="center"
-          justifyContent="flex-end"
-          columnGap="16px"
-          mt="40px"
-        >
-          <Button buttonStyle="SUBTLE">Cancel</Button>
-
-          <Button buttonStyle="STRONG" disabled>
-            Create
-          </Button>
-        </styled.div>
-      </Modal>
+      <CreateNewListModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

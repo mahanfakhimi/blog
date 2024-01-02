@@ -3,16 +3,18 @@ import { styled } from "../../../styled-system/jsx";
 import { type SystemStyleObject } from "../../../styled-system/types";
 
 type InputTextProps = {
+  name: string;
   maxLength: number;
   placeholder?: string;
   description?: string;
   errorMessage?: string | null;
   value: string;
-  onChange: (inputValue: string) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   containerCss?: SystemStyleObject;
 };
 
 const TextInput: FC<InputTextProps> = ({
+  name,
   maxLength,
   placeholder,
   description,
@@ -21,15 +23,14 @@ const TextInput: FC<InputTextProps> = ({
   onChange,
   containerCss,
 }) => {
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value);
-
   return (
     <styled.div fontSize="14px" css={containerCss}>
       <styled.input
+        name={name}
         type="text"
         placeholder={placeholder}
         value={value}
-        onChange={handleChange}
+        onChange={onChange}
         w="100%"
         borderBottomWidth="1px"
         borderBottomStyle="solid"

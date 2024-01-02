@@ -8,7 +8,7 @@ type MenuProps = {
   isOpen: boolean;
   children: ReactNode;
   placement?: Placement;
-  onClose: () => void;
+  onClose: NoneToVoidFunction;
 };
 
 const Menu: FC<MenuProps> = ({ isOpen, anchorEl, onClose, placement, children }) => {
