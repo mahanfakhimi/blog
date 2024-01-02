@@ -91,7 +91,7 @@ const ReadingListPopper = () => {
           ))}
 
           <styled.div pt="16px" borderTop="1px solid #f2f2f2">
-            <Button onClick={handleOpenModal} buttonStyle="TEXT_STRONG">
+            <Button onClick={handleOpenModal} size="LG" buttonStyle="TEXT_STRONG">
               Create new list
             </Button>
           </styled.div>
