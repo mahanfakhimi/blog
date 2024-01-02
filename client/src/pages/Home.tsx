@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { styled } from "../../styled-system/jsx";
-import DiscoverAside from "../components/DiscoverAside";
+import DiscoverAside from "../components/common/DiscoverAside";
 import PostList from "../components/PostList";
 import Header2 from "../components/Header2";
 import TabList, { TabsProperties } from "../components/ui/TabList";

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { styled } from "../../styled-system/jsx";
 import TabList, { TabsProperties } from "../components/ui/TabList";
 import Header2 from "../components/Header2";
-import DiscoverAside from "../components/DiscoverAside";
+import DiscoverAside from "../components/common/DiscoverAside";
 import Avatar from "../components/ui/Avatar";
 import { css } from "../../styled-system/css";
 

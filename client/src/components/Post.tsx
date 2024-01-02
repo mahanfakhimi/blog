@@ -1,6 +1,4 @@
 import { styled } from "../../styled-system/jsx";
-import { css } from "../../styled-system/css";
-import BookmarkIcon from "./icons/BookmarkIcon";
 import Avatar from "./ui/Avatar";
 import Button from "./ui/Button";
 import ReadingListPopper from "./ReadingListPopper";

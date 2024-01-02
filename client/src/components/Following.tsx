@@ -1,6 +1,5 @@
 import { styled } from "../../styled-system/jsx";
 import ProfileInfoPopper from "./ProfileInfoPopper";
-import MoreIcon from "./icons/MoreIcon";
 import Avatar from "./ui/Avatar";
 
 const Following = () => {

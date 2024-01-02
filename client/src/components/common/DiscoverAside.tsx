@@ -1,6 +1,6 @@
-import { styled } from "../../styled-system/jsx";
-import RecommendedTopics from "./RecommendedTopics";
-import Suggestions from "./Suggestions";
+import { styled } from "../../../styled-system/jsx";
+import RecommendedTopics from "../RecommendedTopics";
+import Suggestions from "../Suggestions";
 
 const DiscoverAside = () => {
   return (
