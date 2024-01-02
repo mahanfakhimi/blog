@@ -24,13 +24,10 @@ const CreateNewListModal: FC<CreateNewListModalProps> = memo(({ isOpen, onClose 
   );
 
   const listNameInputMaxLength = 50;
-  const listDescriptionInputMaxLength = 280;
 
-  const isError =
-    formValues.listName.length > listNameInputMaxLength ||
-    formValues.listDescription.length > listDescriptionInputMaxLength;
+  const isError = formValues.listName.length > listNameInputMaxLength;
 
-  const isCreateButtonDisabled = isError || !formValues.listName || !formValues.listDescription;
+  const isCreateButtonDisabled = isError || !formValues.listName;
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormValues((prevFormValues) => ({ ...prevFormValues, [e.target.name]: e.target.value }));
@@ -66,7 +63,7 @@ const CreateNewListModal: FC<CreateNewListModalProps> = memo(({ isOpen, onClose 
       <TextInput
         name="listDescription"
         placeholder="Description"
-        maxLength={listDescriptionInputMaxLength}
+        maxLength={280}
         value={formValues.listDescription}
         onChange={handleInputChange}
         containerCss={{ mb: "16px" }}
