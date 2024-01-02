@@ -134,7 +134,7 @@ export default defineConfig({
 
       radii: { default: { value: "4px" } },
       borders: { primary: { value: "1px solid {colors.neutral}" } },
-      fonts: { sohne: { value: "sohne" } },
+      fonts: { sohne: { value: "sohne" }, "gt-super": { value: "gt-super" } },
     },
 
     recipes: {

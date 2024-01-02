@@ -1,13 +1,14 @@
-// import Home from "./pages/Home";
 // import Notifications from "./pages/Notifications";
-import Profile from "./pages/Profile";
+// import Profile from "./components/pages/Profile";
+
+import Home from "./components/pages/Home";
 
 const App = () => {
   return (
     <div>
-      {/* <Home /> */}
+      <Home />
       {/* <Notifications /> */}
-      <Profile />
+      {/* <Profile /> */}
     </div>
   );
 };

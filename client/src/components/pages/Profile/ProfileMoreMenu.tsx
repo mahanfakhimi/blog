@@ -1,8 +1,8 @@
 import { MouseEvent, useState } from "react";
-import { styled } from "../../styled-system/jsx";
-import MoreIcon from "./icons/MoreIcon";
-import Menu from "./ui/Menu";
-import MenuItem from "./ui/MenuItem";
+import { styled } from "../../../../styled-system/jsx";
+import MoreIcon from "../../icons/MoreIcon";
+import Menu from "../../ui/Menu";
+import MenuItem from "../../ui/MenuItem";
 
 const ProfileMoreMenu = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);

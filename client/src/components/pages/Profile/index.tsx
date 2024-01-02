@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { styled } from "../../styled-system/jsx";
-import { css } from "../../styled-system/css";
-import TabList, { TabsProperties } from "../components/ui/TabList";
-import Header2 from "../components/Header2";
-import ProfileAside from "../components/ProfileAside";
-import PostList from "../components/PostList";
-import Avatar from "../components/ui/Avatar";
-import Button from "../components/ui/Button";
-import SubscribeIcon from "../components/icons/SubscribeIcon";
-import ProfileMoreMenu from "../components/ProfileMoreMenu";
+import { styled } from "../../../../styled-system/jsx";
+import { css } from "../../../../styled-system/css";
+import TabList, { TabsProperties } from "../../ui/TabList";
+import Header2 from "../../Header2";
+import ProfileAside from "../../ProfileAside";
+import PostList from "../../PostList";
+import Avatar from "../../ui/Avatar";
+import Button from "../../ui/Button";
+import SubscribeIcon from "../../icons/SubscribeIcon";
+import ProfileMoreMenu from "./ProfileMoreMenu";
 
 const TABS: TabsProperties = [
   { title: "Home", href: "/@wmkdgywkh" },

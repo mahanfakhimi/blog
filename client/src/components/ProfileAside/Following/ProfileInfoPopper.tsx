@@ -1,9 +1,9 @@
 import { MouseEvent, useState } from "react";
-import { styled } from "../../styled-system/jsx";
-import MoreIcon from "./icons/MoreIcon";
-import Popper from "./ui/Popper";
-import Avatar from "./ui/Avatar";
-import Button from "./ui/Button";
+import { styled } from "../../../../styled-system/jsx";
+import MoreIcon from "../../icons/MoreIcon";
+import Popper from "../../ui/Popper";
+import Avatar from "../../ui/Avatar";
+import Button from "../../ui/Button";
 
 const ProfileInfoPopper = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);

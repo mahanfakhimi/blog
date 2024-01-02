@@ -15,10 +15,7 @@ const Post = () => {
             />
           </a>
 
-          <styled.div display="flex" alignItems="center" fontSize="14px">
-            <styled.h4>The Bold Italic</styled.h4>
-            <styled.span color="#6b6b6b">&nbsp;&nbsp;·&nbsp;&nbsp;Aug 18</styled.span>
-          </styled.div>
+          <styled.h4>The Bold Italic</styled.h4>
         </styled.div>
 
         <styled.h2
@@ -34,6 +31,7 @@ const Post = () => {
         </styled.h2>
 
         <styled.h3
+          fontFamily="gt-super"
           fontSize="16px"
           color="#6A6B6B"
           mb="8px"
