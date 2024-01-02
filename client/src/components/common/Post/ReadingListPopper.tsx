@@ -63,6 +63,7 @@ const ReadingListPopper = () => {
 
   const handleOpenModal = () => {
     handleClosePopper();
+
     setIsModalOpen(true);
   };
 

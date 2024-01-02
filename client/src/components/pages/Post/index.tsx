@@ -1,11 +1,11 @@
 import { styled } from "../../../../styled-system/jsx";
 import Header2 from "../../common/Header2";
-import ClapIcon from "../../icons/ClapIcon";
 import MoreIcon from "../../icons/MoreIcon";
 import RespondIcon from "../../icons/RespondIcon";
 import ShareIcon from "../../icons/ShareIcon";
 import Avatar from "../../ui/Avatar";
 import Button from "../../ui/Button";
+import PostClap from "./PostClap";
 
 const Post = () => {
   return (
@@ -49,17 +49,7 @@ const Post = () => {
           borderY="1px solid #f2f2f2"
         >
           <styled.div display="flex" alignItems="center" columnGap="32px">
-            <styled.button
-              color="#6b6b6b"
-              display="flex"
-              alignItems="center"
-              columnGap="8px"
-              cursor="pointer"
-              _hover={{ color: "#000" }}
-            >
-              <ClapIcon />
-              <styled.p fontSize="14px">100</styled.p>
-            </styled.button>
+            <PostClap initialClapCount={50} />
 
             <styled.button
               color="#6b6b6b"
