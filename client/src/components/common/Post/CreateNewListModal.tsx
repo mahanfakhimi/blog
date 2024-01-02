@@ -1,4 +1,4 @@
-import { type FC, type ChangeEvent, useState, useEffect } from "react";
+import { type FC, type ChangeEvent, useState, useEffect, memo } from "react";
 import { styled } from "../../../../styled-system/jsx";
 import Modal from "../../ui/Modal";
 import CloseIcon from "../../icons/CloseIcon";
@@ -11,12 +11,14 @@ type CreateNewListModalProps = {
   onClose: () => void;
 };
 
-const CreateNewListModal: FC<CreateNewListModalProps> = ({ isOpen, onClose }) => {
+const CreateNewListModal: FC<CreateNewListModalProps> = memo(({ isOpen, onClose }) => {
   const [formValues, setFormValues] = useState({
     listName: "",
     listDescription: "",
     visibility: "PUBLIC" as "PUBLIC" | "PRIVATE",
   });
+
+  console.log("re render");
 
   useEffect(
     () => () => setFormValues({ listName: "", listDescription: "", visibility: "PUBLIC" }),
@@ -95,6 +97,6 @@ const CreateNewListModal: FC<CreateNewListModalProps> = ({ isOpen, onClose }) =>
       </styled.div>
     </Modal>
   );
-};
+});
 
 export default CreateNewListModal;

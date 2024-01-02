@@ -66,7 +66,7 @@ const ReadingListPopper = () => {
     setIsModalOpen(true);
   };
 
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleCloseModal = useCallback(() => setIsModalOpen(false), []);
 
   return (
     <div>
