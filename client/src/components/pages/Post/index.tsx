@@ -2,10 +2,10 @@ import { styled } from "../../../../styled-system/jsx";
 import Header2 from "../../common/Header2";
 import MoreIcon from "../../icons/MoreIcon";
 import RespondIcon from "../../icons/RespondIcon";
-import ShareIcon from "../../icons/ShareIcon";
 import Avatar from "../../ui/Avatar";
 import Button from "../../ui/Button";
 import PostClap from "./PostClap";
+import PostSocialShareMenu from "./PostSocialShareMenu";
 
 const Post = () => {
   return (
@@ -65,16 +65,7 @@ const Post = () => {
           </styled.div>
 
           <styled.div display="flex" alignItems="center" columnGap="32px">
-            <styled.button
-              color="#6b6b6b"
-              display="flex"
-              alignItems="center"
-              columnGap="8px"
-              cursor="pointer"
-              _hover={{ color: "#000" }}
-            >
-              <ShareIcon />
-            </styled.button>
+            <PostSocialShareMenu />
 
             <styled.button
               color="#6b6b6b"
