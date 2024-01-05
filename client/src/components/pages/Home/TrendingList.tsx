@@ -16,7 +16,7 @@ const TrendingList = () => {
 
         <styled.div
           display="grid"
-          gap="1rem"
+          gap="16px"
           gridTemplateColumns={{
             base: "repeat(1,1fr)",
             md: "repeat(2,1fr)",

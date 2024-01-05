@@ -18,7 +18,7 @@ const ProfileAside = () => {
     >
       <Avatar
         src="https://miro.medium.com/v2/resize:fill:110:110/1*kNiE7VKg3MmYmMQ9EABO0Q.jpeg"
-        size="XLG"
+        size="2XLG"
       />
 
       <styled.h2 fontSize="16px" fontWeight="500" mt="16px">

@@ -102,7 +102,8 @@ const avatarRecipe = defineRecipe({
       SM: { width: 24, height: 24 },
       MD: { width: 32, height: 32 },
       LG: { width: 44, height: 44 },
-      XLG: { width: 88, height: 88 },
+      XLG: { width: 64, height: 64 },
+      "2XLG": { width: 88, height: 88 },
     },
   },
 
