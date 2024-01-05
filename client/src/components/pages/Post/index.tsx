@@ -4,11 +4,14 @@ import ReadingListPopper from "../../common/ReadingListPopper";
 import RespondIcon from "../../icons/RespondIcon";
 import Avatar from "../../ui/Avatar";
 import Button from "../../ui/Button";
-import ProfileMoreMenu from "../Profile/ProfileMoreMenu";
+import ProfileMoreMenu from "../../common/ProfileMoreMenu";
 import PostClap from "./PostClap";
 import PostSocialShareMenu from "./PostSocialShareMenu";
+import PostCreatorActionMenu from "../../common/PostCreatorActionMenu";
 
 const Post = () => {
+  const isPostOwnedByViewer = false;
+
   return (
     <div>
       <Header2 />
@@ -68,7 +71,7 @@ const Post = () => {
           <styled.div display="flex" alignItems="center" columnGap="32px">
             <ReadingListPopper />
             <PostSocialShareMenu />
-            <ProfileMoreMenu />
+            {isPostOwnedByViewer ? <PostCreatorActionMenu /> : <ProfileMoreMenu />}
           </styled.div>
         </styled.div>
 

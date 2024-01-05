@@ -1,8 +1,8 @@
 import { type FC, MouseEvent, useState } from "react";
-import { styled } from "../../../../styled-system/jsx";
-import MoreIcon from "../../icons/MoreIcon";
-import Menu from "../../ui/Menu";
-import MenuItem from "../../ui/MenuItem";
+import { styled } from "../../../styled-system/jsx";
+import MoreIcon from "../icons/MoreIcon";
+import Menu from "../ui/Menu";
+import MenuItem from "../ui/MenuItem";
 
 type ProfileMoreMenuProps = {
   isShowCopyMenuItem?: boolean;
@@ -21,6 +21,7 @@ const ProfileMoreMenu: FC<ProfileMoreMenuProps> = ({ isShowCopyMenuItem = false 
         onClick={haneleMenuOpen}
         cursor="pointer"
         color="#6B6B6B"
+        display="flex"
         _hover={{ color: "#000" }}
       >
         <MoreIcon />

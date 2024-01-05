@@ -8,7 +8,7 @@ import PostList from "../../common/PostList";
 import Avatar from "../../ui/Avatar";
 import Button from "../../ui/Button";
 import SubscribeIcon from "../../icons/SubscribeIcon";
-import ProfileMoreMenu from "./ProfileMoreMenu";
+import ProfileMoreMenu from "../../common/ProfileMoreMenu";
 
 const TABS: TabsProperties = [
   { title: "Home", href: "/@wmkdgywkh" },
