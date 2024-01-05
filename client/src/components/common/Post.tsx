@@ -1,6 +1,6 @@
-import { styled } from "../../../../styled-system/jsx";
-import Avatar from "../../ui/Avatar";
-import Button from "../../ui/Button";
+import { styled } from "../../../styled-system/jsx";
+import Avatar from "../ui/Avatar";
+import Button from "../ui/Button";
 import ReadingListPopper from "./ReadingListPopper";
 
 const Post = () => {

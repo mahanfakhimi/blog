@@ -24,8 +24,6 @@ const PostSocialShareMenu = () => {
       <styled.button
         color="#6b6b6b"
         display="flex"
-        alignItems="center"
-        columnGap="8px"
         cursor="pointer"
         _hover={{ color: "#000" }}
         onClick={haneleMenuOpen}

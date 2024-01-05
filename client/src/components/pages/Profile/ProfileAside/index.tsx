@@ -1,7 +1,7 @@
-import { styled } from "../../../styled-system/jsx";
-import Avatar from "../ui/Avatar";
-import Button from "../ui/Button";
-import SubscribeIcon from "../icons/SubscribeIcon";
+import { styled } from "../../../../../styled-system/jsx";
+import Avatar from "../../../ui/Avatar";
+import Button from "../../../ui/Button";
+import SubscribeIcon from "../../../icons/SubscribeIcon";
 import Following from "./Following";
 
 const ProfileAside = () => {

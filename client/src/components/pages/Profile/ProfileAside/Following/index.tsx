@@ -1,6 +1,6 @@
-import { styled } from "../../../../styled-system/jsx";
+import { styled } from "../../../../../../styled-system/jsx";
 import ProfileInfoPopper from "./ProfileInfoPopper";
-import Avatar from "../../ui/Avatar";
+import Avatar from "../../../../ui/Avatar";
 
 const Following = () => {
   return (

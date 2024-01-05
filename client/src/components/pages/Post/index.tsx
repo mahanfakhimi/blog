@@ -1,5 +1,6 @@
 import { styled } from "../../../../styled-system/jsx";
 import Header2 from "../../common/Header2";
+import ReadingListPopper from "../../common/ReadingListPopper";
 import MoreIcon from "../../icons/MoreIcon";
 import RespondIcon from "../../icons/RespondIcon";
 import Avatar from "../../ui/Avatar";
@@ -65,6 +66,7 @@ const Post = () => {
           </styled.div>
 
           <styled.div display="flex" alignItems="center" columnGap="32px">
+            <ReadingListPopper />
             <PostSocialShareMenu />
 
             <styled.button

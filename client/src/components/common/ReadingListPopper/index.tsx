@@ -75,6 +75,7 @@ const ReadingListPopper = () => {
         cursor="pointer"
         onClick={handleOpenPopper}
         color="#6b6b6b"
+        display="flex"
         _hover={{ color: "#000" }}
       >
         {isListBookmarked ? <BookmarkFilledIcon /> : <BookmarkIcon />}
