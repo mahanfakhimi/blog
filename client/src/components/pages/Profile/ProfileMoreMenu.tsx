@@ -1,10 +1,14 @@
-import { MouseEvent, useState } from "react";
+import { type FC, MouseEvent, useState } from "react";
 import { styled } from "../../../../styled-system/jsx";
 import MoreIcon from "../../icons/MoreIcon";
 import Menu from "../../ui/Menu";
 import MenuItem from "../../ui/MenuItem";
 
-const ProfileMoreMenu = () => {
+type ProfileMoreMenuProps = {
+  isShowCopyMenuItem?: boolean;
+};
+
+const ProfileMoreMenu: FC<ProfileMoreMenuProps> = ({ isShowCopyMenuItem = false }) => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const haneleMenuOpen = (e: MouseEvent<HTMLButtonElement>) => setAnchorEl(e.currentTarget);
@@ -28,7 +32,7 @@ const ProfileMoreMenu = () => {
         placement="bottom-end"
         onClose={handleMenuClose}
       >
-        <MenuItem>Copy link to profile</MenuItem>
+        {isShowCopyMenuItem && <MenuItem>Copy link to profile</MenuItem>}
         <MenuItem>Mute this author</MenuItem>
         <MenuItem>Block this author</MenuItem>
       </Menu>

@@ -71,7 +71,7 @@ const Profile = () => {
                 </div>
               </styled.div>
 
-              <ProfileMoreMenu />
+              <ProfileMoreMenu isShowCopyMenuItem />
             </styled.div>
 
             <styled.div display={{ base: "flex", lg: "none" }} alignItems="center" columnGap="16px">

@@ -46,7 +46,7 @@ const ReadingListPopper = () => {
 
     setReadingLists((currReadingLists) =>
       currReadingLists.map((list) =>
-        list.isDefaultReadingList ? { ...list, isBookmarked: true } : list,
+        list.isDefaultReadingList && !isListBookmarked ? { ...list, isBookmarked: true } : list,
       ),
     );
   };

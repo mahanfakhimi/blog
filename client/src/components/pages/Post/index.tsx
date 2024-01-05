@@ -1,10 +1,10 @@
 import { styled } from "../../../../styled-system/jsx";
 import Header2 from "../../common/Header2";
 import ReadingListPopper from "../../common/ReadingListPopper";
-import MoreIcon from "../../icons/MoreIcon";
 import RespondIcon from "../../icons/RespondIcon";
 import Avatar from "../../ui/Avatar";
 import Button from "../../ui/Button";
+import ProfileMoreMenu from "../Profile/ProfileMoreMenu";
 import PostClap from "./PostClap";
 import PostSocialShareMenu from "./PostSocialShareMenu";
 
@@ -68,17 +68,7 @@ const Post = () => {
           <styled.div display="flex" alignItems="center" columnGap="32px">
             <ReadingListPopper />
             <PostSocialShareMenu />
-
-            <styled.button
-              color="#6b6b6b"
-              display="flex"
-              alignItems="center"
-              columnGap="8px"
-              cursor="pointer"
-              _hover={{ color: "#000" }}
-            >
-              <MoreIcon />
-            </styled.button>
+            <ProfileMoreMenu />
           </styled.div>
         </styled.div>
 
