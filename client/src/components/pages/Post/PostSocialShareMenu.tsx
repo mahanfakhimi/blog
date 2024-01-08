@@ -36,6 +36,7 @@ const PostSocialShareMenu = () => {
         isOpen={Boolean(anchorEl)}
         placement="bottom-end"
         onClose={handleMenuClose}
+        containerCss={{ w: "240px" }}
       >
         <MenuItem containerCss={containerCssStyle}>
           <CopyIcon />

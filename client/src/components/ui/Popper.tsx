@@ -2,6 +2,7 @@ import { type CSSProperties, type FC, type ReactNode, useEffect, useRef } from "
 import { type Placement, type VirtualElement, type Instance, createPopper } from "@popperjs/core";
 import { type TransitionStatus, Transition } from "react-transition-group";
 import { styled } from "../../../styled-system/jsx";
+import { SystemStyleObject } from "../../../styled-system/types/system-types";
 import Portal from "./Portal.tsx";
 
 const duration = 200;
@@ -22,9 +23,17 @@ type PopperProps = {
   placement?: Placement;
   onClose: NoneToVoidFunction;
   isOpen: boolean;
+  containerCss?: SystemStyleObject;
 };
 
-const Popper: FC<PopperProps> = ({ children, isOpen, onClose, anchorEl, placement = "bottom" }) => {
+const Popper: FC<PopperProps> = ({
+  children,
+  isOpen,
+  onClose,
+  anchorEl,
+  containerCss,
+  placement = "bottom",
+}) => {
   const popperRef = useRef<HTMLDivElement>(null);
   const popperInstanceRef = useRef<Instance | null>(null);
 
@@ -75,6 +84,7 @@ const Popper: FC<PopperProps> = ({ children, isOpen, onClose, anchorEl, placemen
               pos="relative"
               bgColor="#fff"
               shadow="rgba(0, 0, 0, 0.05) 0px 0px 4px, rgba(0, 0, 0, 0.15) 0px 2px 8px"
+              css={containerCss}
             >
               {children}
             </styled.div>

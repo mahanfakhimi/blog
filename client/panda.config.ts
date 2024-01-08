@@ -7,7 +7,6 @@ const buttonRecipe = defineRecipe({
     cursor: "pointer",
     borderRadius: "100px",
     color: "#fff",
-    transition: "background-color 0.3s,border-color 0.3s",
   },
 
   variants: {

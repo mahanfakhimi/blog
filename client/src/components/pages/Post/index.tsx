@@ -11,6 +11,7 @@ import PostSocialShareMenu from "./PostSocialShareMenu";
 import PostCreatorActionMenu from "../../common/PostCreatorActionMenu";
 import SubscribeIcon from "../../icons/SubscribeIcon";
 import CreatorMorePost from "./CreatorMorePost";
+import FollowButton from "../../common/FollowButton";
 
 const tags = [
   "Programming",
@@ -31,7 +32,7 @@ const Post = () => {
     <div>
       <Header2 />
 
-      <styled.div maxW="750px" w="100%" mx="auto" px="24px">
+      <styled.div borderBottom="1px solid #f2f2f2" maxW="750px" w="100%" mx="auto" px="24px">
         <styled.h1 fontSize={{ base: "32px", md: "42px" }} fontWeight="700" mt="16px">
           Node.JS Trends That Will Dominate the Web in 2024
         </styled.h1>
@@ -143,7 +144,7 @@ const Post = () => {
         </styled.div>
       </styled.div>
 
-      <styled.div bgColor="#f9f9f9" pt="32px">
+      <styled.div bgColor="#f9f9f9" py="32px">
         <styled.div maxW="750px" w="100%" mx="auto" px="24px">
           <div>
             <styled.div display="flex" alignItems="center" justifyContent="space-between">
@@ -154,7 +155,7 @@ const Post = () => {
               />
 
               <styled.div display="flex" alignItems="center" columnGap="16px">
-                <Button buttonStyle="STRONG">Follow</Button>
+                <FollowButton />
 
                 <Button buttonStyle="STRONG" p="0">
                   <SubscribeIcon />
@@ -186,7 +187,7 @@ const Post = () => {
             </styled.p>
           </div>
 
-          <styled.div borderY="1px solid #f2f2f2" mt="32px" py="32px">
+          <styled.div borderY="1px solid #f2f2f2" my="32px" py="32px">
             <styled.h2>More form Mahan_fki</styled.h2>
 
             <styled.div
@@ -204,6 +205,10 @@ const Post = () => {
               ))}
             </styled.div>
           </styled.div>
+
+          <Button buttonStyle="SUBTLE" w={{ base: "100%", sm: "auto" }}>
+            See all from Mahan_fki
+          </Button>
         </styled.div>
       </styled.div>
     </div>
