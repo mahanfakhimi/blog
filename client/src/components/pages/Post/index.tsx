@@ -2,7 +2,6 @@ import { styled } from "../../../../styled-system/jsx";
 import { css } from "../../../../styled-system/css";
 import Header2 from "../../common/Header2";
 import ReadingListPopper from "../../common/ReadingListPopper";
-import RespondIcon from "../../icons/RespondIcon";
 import Avatar from "../../ui/Avatar";
 import Button from "../../ui/Button";
 import ProfileMoreMenu from "../../common/ProfileMoreMenu";
@@ -12,6 +11,7 @@ import PostCreatorActionMenu from "../../common/PostCreatorActionMenu";
 import SubscribeIcon from "../../icons/SubscribeIcon";
 import CreatorMorePost from "./CreatorMorePost";
 import FollowButton from "../../common/FollowButton";
+import PostResponses from "./PostResponses";
 
 const tags = [
   "Programming",
@@ -70,18 +70,7 @@ const Post = () => {
         >
           <styled.div display="flex" alignItems="center" columnGap="32px">
             <PostClap initialClapCount={50} />
-
-            <styled.button
-              color="#6b6b6b"
-              display="flex"
-              alignItems="center"
-              columnGap="8px"
-              cursor="pointer"
-              _hover={{ color: "#000" }}
-            >
-              <RespondIcon />
-              <styled.p fontSize="14px">252</styled.p>
-            </styled.button>
+            <PostResponses />
           </styled.div>
 
           <styled.div display="flex" alignItems="center" columnGap="32px">
@@ -122,18 +111,7 @@ const Post = () => {
         <styled.div display="flex" alignItems="center" justifyContent="space-between" my="32px">
           <styled.div display="flex" alignItems="center" columnGap="32px">
             <PostClap initialClapCount={50} />
-
-            <styled.button
-              color="#6b6b6b"
-              display="flex"
-              alignItems="center"
-              columnGap="8px"
-              cursor="pointer"
-              _hover={{ color: "#000" }}
-            >
-              <RespondIcon />
-              <styled.p fontSize="14px">252</styled.p>
-            </styled.button>
+            <PostResponses />
           </styled.div>
 
           <styled.div display="flex" alignItems="center" columnGap="32px">
