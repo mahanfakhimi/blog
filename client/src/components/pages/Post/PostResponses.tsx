@@ -28,7 +28,11 @@ const responsesPanelTransitionStyles: Partial<Record<TransitionStatus, CSSProper
 };
 
 const PostResponses = () => {
-  const { value: isOpen, setTrue, setFalse } = useFlag(false);
+  const {
+    value: isResponsesPanelOpen,
+    setTrue: openResponsesPanel,
+    setFalse: closeResponsesPanel,
+  } = useFlag();
 
   return (
     <div>
@@ -39,13 +43,13 @@ const PostResponses = () => {
         columnGap="8px"
         cursor="pointer"
         _hover={{ color: "#000" }}
-        onClick={setTrue}
+        onClick={openResponsesPanel}
       >
         <RespondIcon />
         <styled.p fontSize="14px">152</styled.p>
       </styled.button>
 
-      <Transition in={isOpen} unmountOnExit timeout={duration}>
+      <Transition in={isResponsesPanelOpen} unmountOnExit timeout={duration}>
         {(state) => (
           <styled.div pos="fixed" inset="0" zIndex="modal">
             <styled.div
@@ -54,7 +58,7 @@ const PostResponses = () => {
               pos="fixed"
               zIndex="backdrop"
               bgColor="rgba(0, 0, 0, 0.25)"
-              onClick={setFalse}
+              onClick={closeResponsesPanel}
             />
 
             <styled.div
@@ -71,7 +75,7 @@ const PostResponses = () => {
                 </styled.p>
 
                 <styled.button
-                  onClick={setFalse}
+                  onClick={closeResponsesPanel}
                   color="#6b6b6b"
                   _hover={{ color: "#000" }}
                   cursor="pointer"
