@@ -50,7 +50,6 @@ const Modal: FC<ModalProps> = ({ isOpen, children, onClose }) => {
               maxW="550px"
               p="24px"
               rounded="4px"
-              shadow="#00000026 0px 2px 10px"
             >
               {children}
             </styled.div>
