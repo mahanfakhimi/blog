@@ -8,7 +8,7 @@ import Popper from "../../ui/Popper";
 import RecentSearches from "../RecentSearches";
 
 const SearchBar = () => {
-  const [anchorEl, setAnchorEl] = useState<any | null>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [inputValue, setInputValue] = useState("");
 

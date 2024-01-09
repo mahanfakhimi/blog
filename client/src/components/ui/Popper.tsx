@@ -36,7 +36,6 @@ const Popper: FC<PopperProps> = ({
 }) => {
   const popperRef = useRef<HTMLDivElement>(null);
   const popperInstanceRef = useRef<Instance | null>(null);
-  const nodeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     popperInstanceRef.current = createPopper(anchorEl!, popperRef.current!, {
@@ -59,7 +58,6 @@ const Popper: FC<PopperProps> = ({
   return (
     <Portal>
       <Transition
-        nodeRef={nodeRef}
         in={isOpen}
         unmountOnExit
         timeout={duration}
@@ -67,7 +65,6 @@ const Popper: FC<PopperProps> = ({
       >
         {(state) => (
           <styled.div
-            ref={nodeRef}
             pos="fixed"
             inset="0"
             zIndex="popper"

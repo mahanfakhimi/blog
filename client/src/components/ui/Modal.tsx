@@ -1,4 +1,4 @@
-import { type FC, type ReactNode, type CSSProperties, useRef } from "react";
+import { type FC, type ReactNode, type CSSProperties } from "react";
 import { type TransitionStatus, Transition } from "react-transition-group";
 import { styled } from "../../../styled-system/jsx";
 import Portal from "./Portal";
@@ -22,14 +22,11 @@ type ModalProps = {
 };
 
 const Modal: FC<ModalProps> = ({ isOpen, children, onClose }) => {
-  const nodeRef = useRef<HTMLDivElement | null>(null);
-
   return (
     <Portal>
-      <Transition nodeRef={nodeRef} in={isOpen} unmountOnExit timeout={duration}>
+      <Transition in={isOpen} unmountOnExit timeout={duration}>
         {(state) => (
           <styled.div
-            ref={nodeRef}
             pos="fixed"
             inset="0"
             zIndex="modal"

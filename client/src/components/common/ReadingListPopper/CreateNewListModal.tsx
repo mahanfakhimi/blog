@@ -46,9 +46,14 @@ const CreateNewListModal: FC<CreateNewListModalProps> = memo(({ isOpen, onClose 
           Create new list
         </styled.h2>
 
-        <styled.div onClick={onClose} color="#6b6b6b" _hover={{ color: "#000" }} cursor="pointer">
+        <styled.button
+          onClick={onClose}
+          color="#6b6b6b"
+          _hover={{ color: "#000" }}
+          cursor="pointer"
+        >
           <CloseIcon />
-        </styled.div>
+        </styled.button>
       </styled.div>
 
       <TextInput
