@@ -36,6 +36,7 @@ const Popper: FC<PopperProps> = ({
 }) => {
   const popperRef = useRef<HTMLDivElement>(null);
   const popperInstanceRef = useRef<Instance | null>(null);
+  const nodeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     popperInstanceRef.current = createPopper(anchorEl!, popperRef.current!, {
@@ -58,28 +59,24 @@ const Popper: FC<PopperProps> = ({
   return (
     <Portal>
       <Transition
-        nodeRef={popperRef}
+        nodeRef={nodeRef}
         in={isOpen}
         unmountOnExit
         timeout={duration}
         onExiting={() => popperInstanceRef.current?.destroy()}
       >
         {(state) => (
-          <>
-            <styled.div
-              w="100%"
-              h="100%"
-              left="0"
-              top="0"
-              pos="fixed"
-              zIndex="100"
-              onClick={onClose}
-            />
+          <styled.div
+            ref={nodeRef}
+            pos="fixed"
+            inset="0"
+            zIndex="popper"
+            style={{ ...defaultStyle, ...transitionStyles[state] }}
+          >
+            <styled.div inset="0" pos="fixed" zIndex="backdrop" onClick={onClose} />
 
             <styled.div
               ref={popperRef}
-              style={{ ...defaultStyle, ...transitionStyles[state] }}
-              zIndex="1000"
               rounded="3px"
               pos="relative"
               bgColor="#fff"
@@ -88,7 +85,7 @@ const Popper: FC<PopperProps> = ({
             >
               {children}
             </styled.div>
-          </>
+          </styled.div>
         )}
       </Transition>
     </Portal>

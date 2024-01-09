@@ -135,6 +135,13 @@ export default defineConfig({
       radii: { default: { value: "4px" } },
       borders: { primary: { value: "1px solid {colors.neutral}" } },
       fonts: { sohne: { value: "sohne" }, "gt-super": { value: "gt-super" } },
+
+      zIndex: {
+        backdrop: { value: "-1" },
+        header: { value: "1100" },
+        popper: { value: "1200" },
+        modal: { value: "1300" },
+      },
     },
 
     recipes: {

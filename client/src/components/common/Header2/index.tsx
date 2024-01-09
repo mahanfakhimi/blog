@@ -20,7 +20,7 @@ const Header2 = () => {
       borderBottom="1px solid #f2f2f2"
       pos="sticky"
       top="0"
-      zIndex="10000"
+      zIndex="header"
     >
       <styled.div display="flex" alignItems="center" columnGap="24px">
         <Link to="/">

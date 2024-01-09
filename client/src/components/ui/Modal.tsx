@@ -29,25 +29,22 @@ const Modal: FC<ModalProps> = ({ isOpen, children, onClose }) => {
       <Transition nodeRef={nodeRef} in={isOpen} unmountOnExit timeout={duration}>
         {(state) => (
           <styled.div
-            pos="absolute"
-            zIndex="1000"
             ref={nodeRef}
+            pos="fixed"
+            inset="0"
+            zIndex="modal"
             style={{ ...defaultStyle, ...transitionStyles[state] }}
           >
             <styled.div
-              w="100%"
-              h="100%"
-              left="0"
-              top="0"
+              inset="0"
               pos="fixed"
-              zIndex="750"
+              zIndex="backdrop"
               bgColor="rgba(0, 0, 0, 0.25)"
               onClick={onClose}
             />
 
             <styled.div
               bgColor="#fff"
-              zIndex="1000"
               pos="fixed"
               top="50%"
               left="50%"

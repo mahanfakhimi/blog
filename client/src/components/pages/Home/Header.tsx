@@ -15,7 +15,7 @@ const Header = () => {
       borderBottom="1px solid #000"
       pos="sticky"
       top="0"
-      zIndex="10000"
+      zIndex="header"
     >
       <styled.div
         maxW="1200px"
