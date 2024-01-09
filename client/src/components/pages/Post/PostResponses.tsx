@@ -4,6 +4,7 @@ import { styled } from "../../../../styled-system/jsx";
 import useFlag from "../../../hooks/useFlag";
 import RespondIcon from "../../icons/RespondIcon";
 import CloseIcon from "../../icons/CloseIcon";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 const duration = 400;
 
@@ -17,22 +18,26 @@ const transitionStyles: Partial<Record<TransitionStatus, CSSProperties>> = {
   entered: { opacity: 1 },
 };
 
-const responsesPanelDefaultStyle: CSSProperties = {
-  right: "-100vh",
-  transition: `right ${duration}ms`,
-};
-
-const responsesPanelTransitionStyles: Partial<Record<TransitionStatus, CSSProperties>> = {
-  entering: { right: 1 },
-  entered: { right: 1 },
-};
-
 const PostResponses = () => {
   const {
     value: isResponsesPanelOpen,
     setTrue: openResponsesPanel,
     setFalse: closeResponsesPanel,
   } = useFlag();
+
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  const responsesPanelDefaultStyle: CSSProperties = {
+    ...(isMobile ? { bottom: "-100vh" } : { right: "-100vh" }),
+    transition: `${isMobile ? "bottom" : "right"} ${duration}ms`,
+  };
+
+  const commonResponsesPanelTransitionStyles = { ...(isMobile ? { bottom: "0" } : { right: "0" }) };
+
+  const responsesPanelTransitionStyles: Partial<Record<TransitionStatus, CSSProperties>> = {
+    entering: commonResponsesPanelTransitionStyles,
+    entered: commonResponsesPanelTransitionStyles,
+  };
 
   return (
     <div>
@@ -66,8 +71,9 @@ const PostResponses = () => {
               bgColor="#fff"
               pos="fixed"
               p="24px"
-              w="400px"
-              h="100%"
+              w={{ base: "100%", md: "400px" }}
+              h={{ base: "calc(100% - 32px)", md: "100%" }}
+              roundedTop={{ mdDown: "20px" }}
             >
               <styled.div display="flex" alignItems="center" justifyContent="space-between">
                 <styled.p fontSize="20px" fontWeight="500">

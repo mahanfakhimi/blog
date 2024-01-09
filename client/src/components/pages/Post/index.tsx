@@ -32,7 +32,7 @@ const Post = () => {
     <div>
       <Header2 />
 
-      <styled.div borderBottom="1px solid #f2f2f2" maxW="750px" w="100%" mx="auto" px="24px">
+      <styled.div maxW="750px" w="100%" mx="auto" px="24px">
         <styled.h1 fontSize={{ base: "32px", md: "42px" }} fontWeight="700" mt="16px">
           Node.JS Trends That Will Dominate the Web in 2024
         </styled.h1>
@@ -122,7 +122,7 @@ const Post = () => {
         </styled.div>
       </styled.div>
 
-      <styled.div bgColor="#f9f9f9" py="32px">
+      <styled.div borderTop="1px solid #f2f2f2" bgColor="#f9f9f9" py="32px">
         <styled.div maxW="750px" w="100%" mx="auto" px="24px">
           <div>
             <styled.div display="flex" alignItems="center" justifyContent="space-between">
