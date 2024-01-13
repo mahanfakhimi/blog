@@ -1,12 +1,11 @@
 import { type CSSProperties } from "react";
 import { Transition, type TransitionStatus } from "react-transition-group";
-import { styled } from "../../../../styled-system/jsx";
-import useFlag from "../../../hooks/useFlag";
-import RespondIcon from "../../icons/RespondIcon";
-import CloseIcon from "../../icons/CloseIcon";
-import useMediaQuery from "../../../hooks/useMediaQuery";
-import Avatar from "../../ui/Avatar";
-import Button from "../../ui/Button";
+import { styled } from "../../../../../styled-system/jsx";
+import useFlag from "../../../../hooks/useFlag";
+import RespondIcon from "../../../icons/RespondIcon";
+import CloseIcon from "../../../icons/CloseIcon";
+import useMediaQuery from "../../../../hooks/useMediaQuery";
+import CreateResponseForm from "./CreateResponseForm";
 
 const duration = 400;
 
@@ -92,37 +91,7 @@ const PostResponses = () => {
                 </styled.button>
               </styled.div>
 
-              <styled.div mt="24px" p="16px" boxShadow="rgba(0, 0, 0, 0.12) 0px 2px 8px">
-                <styled.div display="flex" alignItems="center" columnGap="10px">
-                  <a href="#">
-                    <Avatar
-                      size="MD"
-                      src="https://miro.medium.com/v2/resize:fill:110:110/1*kNiE7VKg3MmYmMQ9EABO0Q.jpeg"
-                    />
-                  </a>
-
-                  <styled.h4 fontSize="14px">The Bold Italic</styled.h4>
-                </styled.div>
-
-                <styled.input
-                  type="text"
-                  placeholder="What are you thoughes?"
-                  fontSize="14px"
-                  mt="16px"
-                  _placeholder={{ color: "#6b6b6b", opacity: "0.5" }}
-                />
-
-                <styled.div display="flex" alignItems="center" justifyContent="flex-end" mt="24px">
-                  <styled.div display="flex" alignItems="center" columnGap="16px">
-                    <Button buttonStyle="TEXT_STRONG" size="SM">
-                      Cancel
-                    </Button>
-                    <Button buttonStyle="STRONG" size="SM">
-                      Respond
-                    </Button>
-                  </styled.div>
-                </styled.div>
-              </styled.div>
+              <CreateResponseForm />
             </styled.div>
           </styled.div>
         )}
