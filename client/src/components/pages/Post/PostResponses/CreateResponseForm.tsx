@@ -1,4 +1,4 @@
-import { type FC, useCallback, useMemo } from "react";
+import { type FC, useCallback, useMemo, MouseEvent } from "react";
 import {
   Slate,
   Editable,
@@ -39,16 +39,16 @@ const initialValue: Descendant[] = [
 type MarkFormat = "bold" | "italic";
 
 const CreateResponseForm = () => {
-  const editor = useMemo(() => withHistory(withReact(createEditor())), []);
-
-  const renderElement = (props: RenderElementProps) => {
+  const renderElement = useCallback((props: RenderElementProps) => {
     switch (props.element.type) {
       default:
         return <Paragraph {...props} />;
     }
-  };
+  }, []);
 
   const renderLeaf = useCallback((props: RenderLeafProps) => <Leaf {...props} />, []);
+
+  const editor = useMemo(() => withHistory(withReact(createEditor())), []);
 
   return (
     <styled.div mt="24px" p="16px" shadow="rgba(0, 0, 0, 0.12) 0px 2px 8px">
@@ -109,6 +109,11 @@ const Paragraph: FC<RenderElementProps> = ({ attributes, children }) => (
 const MarkButton: FC<{ format: MarkFormat; icon: React.ReactNode }> = ({ format, icon }) => {
   const editor = useSlate();
 
+  const handleMouseDown = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    toggleMark(editor, format);
+  };
+
   return (
     <styled.button
       color="#6b6b6b"
@@ -117,10 +122,7 @@ const MarkButton: FC<{ format: MarkFormat; icon: React.ReactNode }> = ({ format,
       rounded="4px"
       bgColor={isMarkActive(editor, format) ? "#f2f2f2" : undefined}
       _hover={{ bgColor: "#f2f2f2" }}
-      onMouseDown={(event) => {
-        event.preventDefault();
-        toggleMark(editor, format);
-      }}
+      onMouseDown={handleMouseDown}
     >
       {icon}
     </styled.button>
