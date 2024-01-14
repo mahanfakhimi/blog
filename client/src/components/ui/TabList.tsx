@@ -72,7 +72,7 @@ const TabList: FC<TabListProps> = ({ tabs, onTabClick, activeTabIndex }) => {
       w="100%"
       display="flex"
       alignItems="center"
-      boxShadow="#f2f2f2 0px -1px 0px inset"
+      shadow="#f2f2f2 0px -1px 0px inset"
       pos="relative"
     >
       {isShowArrowLeft && renderArrow("left")}
