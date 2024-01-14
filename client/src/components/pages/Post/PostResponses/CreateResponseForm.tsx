@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import { type FC, useCallback, useMemo } from "react";
 import {
   Slate,
   Editable,
@@ -38,18 +38,7 @@ const initialValue: Descendant[] = [
 
 type MarkFormat = "bold" | "italic";
 
-// Util functions
-const isMarkActive = (editor: CustomEditor, format: MarkFormat) => {
-  const marks = Editor.marks(editor);
-  return marks ? marks[format] === true : false;
-};
-
-const toggleMark = (editor: CustomEditor, format: MarkFormat) => {
-  const isActive = isMarkActive(editor, format);
-  isActive ? Editor.removeMark(editor, format) : Editor.addMark(editor, format, true);
-};
-
-const CreateResponseForm: React.FC = () => {
+const CreateResponseForm = () => {
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
 
   const renderElement = (props: RenderElementProps) => {
@@ -103,11 +92,21 @@ const CreateResponseForm: React.FC = () => {
   );
 };
 
-const Paragraph: React.FC<RenderElementProps> = ({ attributes, children }) => (
+const isMarkActive = (editor: CustomEditor, format: MarkFormat) => {
+  const marks = Editor.marks(editor);
+  return marks ? marks[format] === true : false;
+};
+
+const toggleMark = (editor: CustomEditor, format: MarkFormat) => {
+  const isActive = isMarkActive(editor, format);
+  isActive ? Editor.removeMark(editor, format) : Editor.addMark(editor, format, true);
+};
+
+const Paragraph: FC<RenderElementProps> = ({ attributes, children }) => (
   <p {...attributes}>{children}</p>
 );
 
-const MarkButton: React.FC<{ format: MarkFormat; icon: React.ReactNode }> = ({ format, icon }) => {
+const MarkButton: FC<{ format: MarkFormat; icon: React.ReactNode }> = ({ format, icon }) => {
   const editor = useSlate();
 
   return (
@@ -128,7 +127,7 @@ const MarkButton: React.FC<{ format: MarkFormat; icon: React.ReactNode }> = ({ f
   );
 };
 
-const Leaf: React.FC<RenderLeafProps> = ({ attributes, children, leaf }) => {
+const Leaf: FC<RenderLeafProps> = ({ attributes, children, leaf }) => {
   if (leaf.bold) children = <strong>{children}</strong>;
   if (leaf.italic) children = <em>{children}</em>;
 
