@@ -6,6 +6,7 @@ import RespondIcon from "../../../icons/RespondIcon";
 import CloseIcon from "../../../icons/CloseIcon";
 import useMediaQuery from "../../../../hooks/useMediaQuery";
 import CreateResponseForm from "./CreateResponseForm";
+import Portal from "../../../ui/Portal";
 
 const duration = 400;
 
@@ -55,47 +56,51 @@ const PostResponses = () => {
         <styled.p fontSize="14px">152</styled.p>
       </styled.button>
 
-      <Transition in={isResponsesPanelOpen} unmountOnExit timeout={duration}>
-        {(state) => (
-          <styled.div pos="fixed" inset="0" zIndex="modal">
-            <styled.div
-              style={{ ...defaultStyle, ...transitionStyles[state] }}
-              inset="0"
-              pos="fixed"
-              zIndex="backdrop"
-              bgColor="rgba(0, 0, 0, 0.25)"
-              onClick={closeResponsesPanel}
-            />
+      <Portal>
+        <Transition in={isResponsesPanelOpen} unmountOnExit timeout={duration}>
+          {(state) => (
+            <styled.div pos="fixed" inset="0" zIndex="modal">
+              <styled.div
+                style={{ ...defaultStyle, ...transitionStyles[state] }}
+                inset="0"
+                pos="fixed"
+                zIndex="backdrop"
+                bgColor="rgba(0, 0, 0, 0.25)"
+                onClick={closeResponsesPanel}
+              />
 
-            <styled.div
-              style={{ ...responsesPanelDefaultStyle, ...responsesPanelTransitionStyles[state] }}
-              bgColor="#fff"
-              pos="fixed"
-              p="24px"
-              w={{ base: "100%", md: "400px" }}
-              h={{ base: "calc(100% - 32px)", md: "100%" }}
-              roundedTop={{ mdDown: "20px" }}
-            >
-              <styled.div display="flex" alignItems="center" justifyContent="space-between">
-                <styled.p fontSize="20px" fontWeight="500">
-                  Reponses (13)
-                </styled.p>
+              <styled.div
+                style={{ ...responsesPanelDefaultStyle, ...responsesPanelTransitionStyles[state] }}
+                bgColor="#fff"
+                pos="fixed"
+                p="24px"
+                maxH="100vh"
+                overflowY="auto"
+                w={{ base: "100%", md: "400px" }}
+                h={{ base: "calc(100% - 32px)", md: "100%" }}
+                roundedTop={{ mdDown: "20px" }}
+              >
+                <styled.div display="flex" alignItems="center" justifyContent="space-between">
+                  <styled.p fontSize="20px" fontWeight="500">
+                    Reponses (13)
+                  </styled.p>
 
-                <styled.button
-                  onClick={closeResponsesPanel}
-                  color="#6b6b6b"
-                  _hover={{ color: "#000" }}
-                  cursor="pointer"
-                >
-                  <CloseIcon />
-                </styled.button>
+                  <styled.button
+                    onClick={closeResponsesPanel}
+                    color="#6b6b6b"
+                    _hover={{ color: "#000" }}
+                    cursor="pointer"
+                  >
+                    <CloseIcon />
+                  </styled.button>
+                </styled.div>
+
+                <CreateResponseForm />
               </styled.div>
-
-              <CreateResponseForm />
             </styled.div>
-          </styled.div>
-        )}
-      </Transition>
+          )}
+        </Transition>
+      </Portal>
     </div>
   );
 };

@@ -116,6 +116,10 @@ const globalCss = defineGlobalStyles({
     userSelect: "none",
     WebkitTapHighlightColor: "transparent",
   },
+
+  em: {
+    fontStyle: "italic",
+  },
 });
 
 export default defineConfig({

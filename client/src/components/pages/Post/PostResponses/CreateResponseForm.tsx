@@ -32,7 +32,7 @@ declare module "slate" {
 const initialValue: Descendant[] = [
   {
     type: "paragraph",
-    children: [{ text: "this is a text" }],
+    children: [{ text: "" }],
   },
 ];
 
@@ -109,6 +109,8 @@ const Paragraph: FC<RenderElementProps> = ({ attributes, children }) => (
 const MarkButton: FC<{ format: MarkFormat; icon: React.ReactNode }> = ({ format, icon }) => {
   const editor = useSlate();
 
+  const isActive = isMarkActive(editor, format);
+
   const handleMouseDown = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     toggleMark(editor, format);
@@ -116,12 +118,12 @@ const MarkButton: FC<{ format: MarkFormat; icon: React.ReactNode }> = ({ format,
 
   return (
     <styled.button
-      color="#6b6b6b"
+      color={isActive ? "#1a8917" : "#6b6b6b"}
       cursor="pointer"
       p="8px"
       rounded="4px"
-      bgColor={isMarkActive(editor, format) ? "#f2f2f2" : undefined}
-      _hover={{ bgColor: "#f2f2f2" }}
+      bgColor={isActive ? "#e8f3e8" : undefined}
+      _hover={{ bgColor: !isActive ? "#f2f2f2" : undefined }}
       onMouseDown={handleMouseDown}
     >
       {icon}

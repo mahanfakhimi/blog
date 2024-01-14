@@ -2,6 +2,7 @@
   font-family: "gt-super";
   font-weight: 400;
   font-display: swap;
+  font-style: normal;
   src:
     local("gt-super"),
     url("/fonts/gt-super-400-normal.woff") format("woff");
@@ -11,6 +12,7 @@
   font-family: "sohne";
   font-weight: 400;
   font-display: swap;
+  font-style: normal;
   src:
     local("sohne"),
     url("/fonts/sohne-400-normal.woff") format("woff");
@@ -18,8 +20,19 @@
 
 @font-face {
   font-family: "sohne";
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+  src:
+    local("sohne"),
+    url("/fonts/sohne-400-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "sohne";
   font-weight: 500;
   font-display: swap;
+  font-style: normal;
   src:
     local("sohne"),
     url("/fonts/sohne-500-normal.woff") format("woff");
@@ -27,9 +40,30 @@
 
 @font-face {
   font-family: "sohne";
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+  src:
+    local("sohne"),
+    url("/fonts/sohne-500-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "sohne";
   font-weight: 700;
   font-display: swap;
+  font-style: normal;
   src:
     local("sohne"),
     url("/fonts/sohne-700-normal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "sohne";
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+  src:
+    local("sohne"),
+    url("/fonts/sohne-700-italic.woff") format("woff");
 }
