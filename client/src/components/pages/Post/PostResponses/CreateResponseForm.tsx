@@ -7,6 +7,7 @@ import {
   useSlate,
   RenderLeafProps,
   ReactEditor,
+  DefaultElement,
 } from "slate-react";
 import { BaseEditor, createEditor, Descendant, Editor } from "slate";
 import { HistoryEditor, withHistory } from "slate-history";
@@ -42,7 +43,7 @@ const CreateResponseForm = () => {
   const renderElement = useCallback((props: RenderElementProps) => {
     switch (props.element.type) {
       default:
-        return <Paragraph {...props} />;
+        return <DefaultElement {...props} />;
     }
   }, []);
 
@@ -71,7 +72,7 @@ const CreateResponseForm = () => {
           className={css({ fontSize: "14px", mt: "24px" })}
         />
 
-        <styled.div display="flex" alignItems="center" justifyContent="space-between" mt="24px">
+        <styled.div display="flex" alignItems="center" justifyContent="space-between" mt="48px">
           <styled.div display="flex" alignItems="center" columnGap="16px">
             <MarkButton format="bold" icon={<BoldIcon />} />
             <MarkButton format="italic" icon={<ItalicIcon />} />
@@ -101,10 +102,6 @@ const toggleMark = (editor: CustomEditor, format: MarkFormat) => {
   const isActive = isMarkActive(editor, format);
   isActive ? Editor.removeMark(editor, format) : Editor.addMark(editor, format, true);
 };
-
-const Paragraph: FC<RenderElementProps> = ({ attributes, children }) => (
-  <p {...attributes}>{children}</p>
-);
 
 const MarkButton: FC<{ format: MarkFormat; icon: React.ReactNode }> = ({ format, icon }) => {
   const editor = useSlate();
